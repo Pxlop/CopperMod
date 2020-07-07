@@ -1,7 +1,7 @@
 package io.github.Pxlop.coppermod.init;
 
-import io.github.Pxlop.coppermod.util.CopperArmorMaterial;
-import io.github.Pxlop.coppermod.util.CopperItemTier;
+import io.github.Pxlop.coppermod.util.ModArmorMaterial;
+import io.github.Pxlop.coppermod.util.ModItemTier;
 import io.github.Pxlop.coppermod.CopperMod;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -21,25 +21,25 @@ public class ModItems {
 
     //Tools
     //Copper sword
-    public static final RegistryObject<Item> COPPER_SWORD = ITEMS.register("copper_sword", () -> new SwordItem(new CopperItemTier(6.0f), -1, -2.4f, new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<SwordItem> COPPER_SWORD = ITEMS.register("copper_sword", () -> new SwordItem(ModItemTier.COPPER, 6, -2.4f, new Item.Properties().group(ItemGroup.COMBAT)));
     //Copper pickaxe
-    public static final RegistryObject<Item> COPPER_PICKAXE = ITEMS.register("copper_pickaxe", () -> new PickaxeItem(new CopperItemTier(4.0f), -1, -2.8f, new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<PickaxeItem> COPPER_PICKAXE = ITEMS.register("copper_pickaxe", () -> new PickaxeItem(ModItemTier.COPPER, 4, -2.8f, new Item.Properties().group(ItemGroup.TOOLS)));
     //Copper axe
-    public static final RegistryObject<Item> COPPER_AXE = ITEMS.register("copper_axe", () -> new AxeItem(new CopperItemTier(9.0f), -1, -3.1f, new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<AxeItem> COPPER_AXE = ITEMS.register("copper_axe", () -> new AxeItem(ModItemTier.COPPER, 9.0f, -3.1f, new Item.Properties().group(ItemGroup.TOOLS)));
     //Copper shovel
-    public static final RegistryObject<Item> COPPER_SHOVEL = ITEMS.register("copper_shovel", () -> new ShovelItem(new CopperItemTier(4.5f), -1, -3.0f, new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<ShovelItem> COPPER_SHOVEL = ITEMS.register("copper_shovel", () -> new ShovelItem(ModItemTier.COPPER, 4.5f, -3.0f, new Item.Properties().group(ItemGroup.TOOLS)));
     //Copper hoe
-    public static final RegistryObject<Item> COPPER_HOE = ITEMS.register("copper_hoe", () -> new HoeItem(new CopperItemTier(1.0f), -1.0f, new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<HoeItem> COPPER_HOE = ITEMS.register("copper_hoe", () -> new HoeItem(ModItemTier.COPPER, -1.0f, new Item.Properties().group(ItemGroup.TOOLS)));
 
     //Armor
     //Copper helmet
-    public static final RegistryObject<Item> COPPER_HELMET = ITEMS.register("copper_helmet", () -> new ArmorItem(new CopperArmorMaterial(), EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)));
+    public static final RegistryObject<ArmorItem> COPPER_HELMET = ITEMS.register("copper_helmet", () -> new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)));
     //Copper chestplate
-    public static final RegistryObject<Item> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", () -> new ArmorItem(new CopperArmorMaterial(), EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1)));
+    public static final RegistryObject<ArmorItem> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", () -> new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1)));
     //Copper leggings
-    public static final RegistryObject<Item> COPPER_LEGGINGS = ITEMS.register("copper_leggings", () -> new ArmorItem(new CopperArmorMaterial(), EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1)));
+    public static final RegistryObject<ArmorItem> COPPER_LEGGINGS = ITEMS.register("copper_leggings", () -> new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1)));
     //Copper boots
-    public static final RegistryObject<Item> COPPER_BOOTS = ITEMS.register("copper_boots", () -> new ArmorItem(new CopperArmorMaterial(), EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1)));
+    public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS.register("copper_boots", () -> new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1)));
 
     //Block items
     //Copper block item
